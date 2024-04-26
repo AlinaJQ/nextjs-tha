@@ -4,4 +4,12 @@ description: 4. . When would you choose to use Edge Functions, Serverless Functi
 date: "2024-04-26"
 ---
 
-asd
+Serverless functions can be deployed to a specific region and best suit the backend of event-driven applications that require rapid scaling and minimal infrastructure management. Popular use cases are image and video processing, IoT, and real-time data analytics—recommended deployment in the same region with the main data storages and databases to avoid long network roundtrips.
+
+Edge functions are global by default, however, Vercel offers to opt into a single region if this is the case. Ideal use cases for applications that require low latency such as live streaming, gaming or working with sensitive data, as they prevent data transfer between regions.
+
+Edge Middleware is part of request processing, is available globally only, and is always executed in the region nearest the user. Popular use cases are authentification and localisation of the content delivered to users maximising loading time.
+
+Based on the following resources:
+[Function concept](https://vercel.com/docs/functions/concepts)
+[Best practices of choosing storage solutions](https://vercel.com/docs/storage#choosing-a-storage-product)
