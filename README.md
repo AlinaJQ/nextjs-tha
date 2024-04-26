@@ -2,4 +2,4 @@
 
 Customer Success Engineer Take Home Assessment Answers
 
-[Live Vercel Deployment](https://nextjs-dxsuk4fa6-alinajqs-projects.vercel.app/)
+[Live Vercel Deployment](https://nextjs-tha-alinajqs-projects.vercel.app/)
