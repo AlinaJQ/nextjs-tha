@@ -4,4 +4,21 @@ description: 8. A customer is creating a site and would like their project not t
 date: "2024-04-26"
 ---
 
-asd
+**Dear customer,**
+
+Thank you for contacting us at Vercel Customer Service. My name is Alina and I will be happy to assist you today.
+
+As I understand, you enquired about the possibility of your project not being indexed by search engines.
+
+Since a Preview Deployment creates a new version of a site under a different domain, a search engine would consider it as a new website when crawling it.
+To prevent that by default in Vercel the X-Robots-Tag HTTP header is automatically set to 'noindex' for all Preview Deployments so that search engines do not accidentally index the Preview URLs.
+When a custom domain is assigned to a Git branch, this behaviour is prevented. In that case, the X-Robots-Tag header is not set.
+
+More info about can be found [here](https://vercel.com/docs/deployments/preview-deployments) and about using the X-Robots-Tag HTTP header [here](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#xrobotstag).
+
+We are looking forward to hearing from you.
+
+Have a great day and take care,
+
+**Alina**
+**Vercel CSE**

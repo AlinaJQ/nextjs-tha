@@ -4,4 +4,45 @@ description: 7. A customer writes in to the Helpdesk asking "How do I do a redir
 date: "2024-04-26"
 ---
 
-asd
+**Dear customer,**
+
+Thank you for getting in touch with us today.
+
+As I understand, You require assistance with redirecting from the /blog path to https://example.com?.
+
+It can be implemented in various ways in Vercel.
+The most commonly used is redirects within vercel.json like this:
+```
+{
+  "redirects": [
+    {"source": "/blog", "destination": "https://example.com?", "permanent": false}
+  ]
+}
+```
+The option "permanent": false will return a 307 Temporary Redirect while "permanent": true a 308 Permanent Redirect server status code.
+More examples [here](https://vercel.com/docs/projects/project-configuration).
+
+Another common way is to make use of the redirects option in the next.config.js:
+```
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/blog',
+        destination: 'https://example.com?',
+        permanent: true,
+      },
+    ]
+  },
+}
+```
+Good to know that redirects run before Middleware and may have a limit on platforms. For example, on Vercel, there's a limit of 1,024 redirects and to manage a large number of redirects (1000+), consider creating a custom solution.
+More examples can be found [here](https://nextjs.org/docs/pages/building-your-application/routing/redirecting).
+
+However, there might be more advanced use cases that need a personal approach and support from a dedicated engineering team.
+If this is the case feel free to contact us with a detailed description.
+
+Have a lovely day,
+
+**Alina**
+**Vercel CSE**
